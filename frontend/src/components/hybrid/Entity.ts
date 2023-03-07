@@ -1,6 +1,6 @@
 import * as THREE from "three";
-import { au, degToRad, metersToUnits, minEntityRadius } from "./Math";
-import { CelestialBody } from "./SolarSystem";
+import {au, degToRad, metersToUnits, minEntityRadius} from "./Math";
+import {CelestialBody} from "./SolarSystem";
 
 export default class Entity
 {
@@ -40,7 +40,8 @@ export default class Entity
         this.true_anomaly = true_anomaly;
         this.classid = classid;
 
-        // math
+
+			// math
         let semiMinorAxis = (semimajor_axis * Math.sqrt(1-eccentricity**2))
         let semiLatusRectum = semimajor_axis * (1-eccentricity**2)
         let focusDistance = eccentricity*semimajor_axis
